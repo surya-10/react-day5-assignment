@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -54,7 +55,7 @@ code {
   display: flex;
   flex-direction: column;
   text-align: center;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   justify-content: space-between;
   min-width: 280px;
   gap: 10px;
@@ -63,10 +64,34 @@ code {
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   min-height: 350px;
+  position: relative;
 }
 .user:hover{
   /* border: 1px solid violet; */
   box-shadow: 0px 0px 5px rgb(228, 163, 163), 0px 0px 10px yellowgreen, 0px 0px 26px cadetblue;
+}
+.user h3{
+  margin-top: 13px;
+}
+.details{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.student-profile{
+  border: 1px solid rebeccapurple;;
+  border-radius: 8px;
+  margin: 20px;
+  font-family: 'Crete Round', serif;
+  background-color: darkseagreen;
+
+}
+.arrow{
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 .user-btn{
@@ -141,6 +166,21 @@ code {
     color: transparent;
     background-clip: text;
   }
+}
+.full-profile{
+  position: absolute;
+  right: 7px;
+  top: 6px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: cadetblue;
+  color: white;
+  padding: 2px 4px;
+  cursor: pointer;
+}
+.full-profile:hover{
+  font-size: 15px;
 }
 .inputs{
   display: flex;

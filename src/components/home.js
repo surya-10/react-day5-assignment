@@ -23,6 +23,9 @@ function Home({user, setUser}){
     function sendToEdit(id){
         navigate(`/edit-user/${id}`)
     }
+    function viewProfile(id){
+        navigate(`/profile/${id}`)
+    }
     
     return (
         <div className="home-div">
@@ -46,6 +49,7 @@ function Home({user, setUser}){
                                 <button className="edit" onClick={()=>sendToEdit(val.id)}>Edit</button>
                                 <button className="delete" onClick={()=>deleteData(val.id)}>Delete</button>
                                 </div>
+                                <button className="full-profile" onClick={()=>viewProfile(val.id)}>Profile</button>
                         </div>
                     ))}
                 </div>

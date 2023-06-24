@@ -6,6 +6,7 @@ import Dashboard from './components/dashboard';
 import { Route, Routes } from 'react-router-dom';
 import AddUser from './components/adduser';
 import EditUser from './components/edituser';
+import Profile from './components/fullprofile';
 
 function App() {
   let [user, setUser] = useState([]);
@@ -33,6 +34,9 @@ function App() {
         user={user}
         setUser={setUser}/>}/>
         <Route path='edit-user/:id' element={<EditUser
+        user={user}
+        setUser={setUser}/>}/>
+        <Route path='profile/:id' element={<Profile
         user={user}
         setUser={setUser}/>}/>
       </Routes>
