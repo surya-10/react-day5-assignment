@@ -11,3 +11,307 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  flex-direction: row;
+  width: 100%;
+}
+.left{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.base-content{
+  width: 80%;
+  margin: 30px auto;
+  
+}
+.users-div{
+  /* margin-top: 40px; */
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 40px auto;
+  justify-content: center;
+
+}
+.user{
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  min-width: 280px;
+  gap: 10px;
+  border: 1px solid rgb(169, 188, 223);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  min-height: 350px;
+}
+.user:hover{
+  /* border: 1px solid violet; */
+  box-shadow: 0px 0px 5px rgb(228, 163, 163), 0px 0px 10px yellowgreen, 0px 0px 26px cadetblue;
+}
+
+.user-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+.user h3:hover, .user p:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.user-btn button{
+  padding: 10px 15px;
+  border: none;
+  border-radius: 7px;
+}
+.edit{
+  color: white;
+  background-color: black;
+}
+.delete{
+  color: white;
+  background-color: crimson;
+}
+.edit:hover{
+  color: white;
+  background-color: rgb(37, 37, 37);
+}
+.delete:hover{
+  color: white;
+  background-color: rgb(188, 35, 66);
+}
+.base-heading{
+  display: grid;
+  place-content: center;
+  height: 180px;
+  width: 100%;
+  color: transparent;
+  animation: animate;
+  animation-timing-function:linear;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+}
+.base-heading h3{
+  font-size: 35px;
+  text-transform: uppercase;
+}
+.base-heading p{
+  font-size: 20px;
+}
+@keyframes animate{
+  0%{
+    background: linear-gradient(to top, rgba(2,0,36,1) 0%, palegreen 35%, rgb(234, 88, 55) 100%);
+    color: transparent;
+    background-clip: text;
+  }
+  40%{
+    background: linear-gradient(to bottom, rgba(2,0,36,1) 0%, rgb(113, 60, 59) 35%, rgb(97, 145, 196) 100%);
+    color: transparent;
+    background-clip: text;
+  }
+  70%{
+    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, pink 35%, rgb(80, 139, 150) 100%);
+    color: transparent;
+    background-clip: text;
+
+  }
+  100%{
+    background: linear-gradient(to left, rgba(34,193,195,1) 0%, rgb(230, 88, 209) 35%, powderblue 100%);
+    color: transparent;
+    background-clip: text;
+  }
+}
+.inputs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 80%;
+  margin: 15px auto;
+}
+.inputs input{
+  padding: 13px 17px;
+  border-radius: 18px;
+  outline: none;
+  width: 80%;
+  margin: 0 auto;
+  border:  1px solid rgb(150, 149, 149);
+}
+.create-btn{
+  background-color: rgb(14, 139, 14);
+  color: white;
+  padding: 9px 10px;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.create-btn:hover{
+  background-color: rgb(11, 103, 11);
+}
+.update-btn:hover{
+  background-color: rgb(74, 73, 73);
+}
+.update-btn{
+  cursor: pointer;
+  background-color: gray;
+  color: white;
+  padding: 9px 10px;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+.add-user h3{
+  background-color: rgb(57, 37, 105);
+  color: white;
+  width: 50%;
+  margin: 10px auto;
+  padding: 5px;
+  border-radius: 8px;
+}
+.nav{
+  padding: 30px 10px;
+  background: linear-gradient(to right, rgba(34,193,195,1) 39%, rgba(97,45,253,0.8297443977591037) 74%);
+
+}
+.buttons button{
+  border: none;
+  padding: 9px 10px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+.buttons button:hover{
+  background-color: black;
+  color: white;
+}
+.nav h3{
+  text-transform: uppercase;
+  font-size: 25px;
+  color: rgb(86, 27, 86);
+}
+.bars{
+  display: none;
+}
+.footer{
+  width: 100%;
+  height: 50px;
+  background-color: darkslateblue;
+  color: white;
+  display: grid;
+  place-content: center;
+}
+@media only screen and (max-width:590px){
+  .user{
+    height: auto;
+  }
+  .base-heading h3{
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+  .base-heading p{
+    font-size: 15px;
+  }
+  .nav h3{
+    text-transform: uppercase;
+    font-size: 18px;
+    color: rgb(86, 27, 86);
+  }
+  .buttons{
+    display: none;
+  }.bars{
+    display: block;
+  }
+  .buttons1{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+
+  }
+  .menu-bar{
+    display: flex;
+    flex-direction: column;
+  }
+  .bars{
+    position:absolute;
+    right: 10px;
+  }
+  .left{
+    display: flex;
+    /* justify-content: flex-start; */
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .buttons{
+    margin-top: 20px;
+  }
+  .buttons button{
+    width: 150px;
+  }
+  /* .buttons{
+    display: flex;
+  } */
+  .add-user h3{
+    background-color: rgb(57, 37, 105);
+    color: white;
+    width: 90%;
+    margin: 10px auto;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+  .inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin: 15px auto;
+  }
+  .inputs input{
+  padding: 5px 10px;
+  border-radius: 18px;
+  outline: none;
+  width: 100%;
+  margin: 0 auto;
+  border:  1px solid rgb(150, 149, 149);
+  }
+}
+@media only screen and (max-width:350px){
+  .base-heading h3{
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+  .base-heading p{
+    font-size: 13px;
+  }
+}
